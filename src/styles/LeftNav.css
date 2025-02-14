@@ -1,0 +1,41 @@
+/* src/styles/LeftNav.css */
+
+.left-nav {
+  width: 220px;
+  min-width: 220px;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.nav-logo {
+  text-align: center; /* Center the logo */
+  margin-bottom: 20px;
+}
+
+.nav-logo img {
+  width: 120px; /* Adjust width to make the logo smaller */
+  height: auto;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.nav-list li:hover,
+.nav-list li.active {
+  background: #f0f0f0;
+}

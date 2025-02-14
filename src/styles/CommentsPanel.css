@@ -1,0 +1,155 @@
+/* src/styles/CommentsPanel.css */
+
+/* Overlay covering the entire screen with a semi-transparent dark background */
+.comments-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal container with rounded corners and a subtle shadow */
+.comments-modal {
+  background: #fff;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header styling with gold accents */
+.comments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  background: #f7f7f7;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.comments-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  color: #ffd700; /* Gold color */
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: #e6c200; /* Darker gold on hover */
+}
+
+/* Body content styling */
+.comments-body {
+  padding: 16px;
+  flex: 1;
+}
+
+.card-info p {
+  margin: 4px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Comments section styling */
+.comments-section {
+  margin-top: 16px;
+}
+
+.comments-section h4 {
+  margin: 0 0 8px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.comment-item {
+  background: #f2f2f2;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.no-comments {
+  font-size: 0.9em;
+  color: #999;
+}
+
+/* Add Comment Input and Button */
+.add-comment {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.add-comment input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 0.9em;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.add-comment input:focus {
+  border-color: #ffd700; /* Gold focus */
+}
+
+.add-comment button {
+  background: #ffd700; /* Gold button */
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add-comment button:hover {
+  background: #e6c200; /* Darker gold on hover */
+}

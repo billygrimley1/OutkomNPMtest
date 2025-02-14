@@ -1,0 +1,142 @@
+/* src/styles/TaskCard.css */
+
+.task-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task-card.top-priority {
+  /* Additional styling for top priority if needed */
+}
+
+.task-card-main h4 {
+  margin: 0 0 6px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.top-indicator {
+  color: #ffd700; /* Gold color */
+  font-size: 0.9em;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.task-card-main p {
+  margin: 4px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Expanded section for subtasks */
+.task-card-expanded {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #ddd;
+}
+
+.task-card-expanded h5 {
+  margin: 0 0 6px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.task-card-expanded ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.task-card-expanded li {
+  font-size: 0.85em;
+  color: #555;
+  margin: 2px 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  padding: 2px 4px;
+}
+
+.task-card-expanded li:hover {
+  background: #f0f0f0;
+}
+
+.task-card-expanded li.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+  width: 100%;
+  background: #eee;
+  border-radius: 8px;
+  margin-top: 6px;
+  overflow: hidden;
+  height: 18px;
+}
+
+.progress-fill {
+  height: 100%;
+  text-align: center;
+  color: #333;
+  font-size: 0.8em;
+  line-height: 18px;
+  transition: width 0.3s ease;
+}
+
+/* Editable Inputs in TaskCard */
+.editable-input {
+  width: 100%;
+  padding: 4px 6px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Save Button for Edit Mode */
+.save-button {
+  padding: 6px 10px;
+  background: #ffd700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 6px;
+  transition: background 0.2s ease;
+}
+
+.save-button:hover {
+  background: #e6c200;
+}
+
+/* Comments Button on Task Card */
+.comments-button {
+  padding: 6px 10px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+  margin-top: 8px;
+  transition: background 0.2s ease;
+}
+
+.comments-button:hover {
+  background: #e0e0e0;
+}

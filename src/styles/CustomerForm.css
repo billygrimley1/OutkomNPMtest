@@ -1,0 +1,68 @@
+/* CustomerForm.css */
+
+.customer-form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.customer-form-container h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.customer-form-container form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.customer-form-container form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.customer-form-container form label input {
+  margin-top: 6px;
+  padding: 8px 10px;
+  font-size: 0.95em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.customer-form-container form label input:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  outline: none;
+}
+
+/* Full-width fields (if needed) */
+.customer-form-container form label.full-width {
+  grid-column: 1 / -1;
+}
+
+.customer-form-container form button {
+  grid-column: 1 / -1;
+  background: #ffd700;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.customer-form-container form button:hover {
+  background: #e6c200;
+}

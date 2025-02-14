@@ -1,0 +1,263 @@
+/* src/styles/Kanban.css */
+
+/* Container for the entire Kanban board */
+.kanban-container {
+  padding: 10px;
+  overflow-x: auto;
+}
+
+/* Layout for the board columns */
+.kanban-board {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+/* --------------------- */
+/* Kanban Column Styling */
+/* --------------------- */
+.kanban-column {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px; /* Reduced vertical length from previous 400px */
+}
+
+.column-header {
+  padding: 8px; /* Reduced padding for a less bulky header */
+  background: linear-gradient(135deg, #f7f7f7, #eaeaea);
+  border-bottom: 2px solid #ccc;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #333;
+  cursor: default;
+}
+
+.card-list {
+  padding: 8px; /* Reduced padding */
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 150px; /* Reduced from 200px to 150px */
+}
+
+/* ------------------- */
+/* Filter Panel Styles */
+/* ------------------- */
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 0 0 15px 0; /* Top: 0, Right: 0, Bottom: 15px, Left: 0 */
+  max-width: 400px; /* Restrict the width so it doesn't span full Kanban width */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-panel label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85em;
+  color: #333;
+}
+
+/* Updated to constrain the width */
+.filter-panel input,
+.filter-panel select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 0.9em;
+  background: #f9f9f9;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 4px;
+  width: auto;
+  max-width: 150px; /* Limit the width to 150px (adjust if needed) */
+}
+
+.filter-panel input:focus,
+.filter-panel select:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.filter-panel button {
+  border: none;
+  background: #ffd700;
+  color: #333;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.2s ease;
+  margin-top: 22px; /* Adjust as needed for vertical alignment */
+}
+
+.filter-panel button:hover {
+  background: #e6c200;
+}
+
+/* ------------------- */
+/* Board Management Styles */
+/* ------------------- */
+/* Constrain the select width here as well */
+.board-management select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 0.9em;
+  background: #f9f9f9;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 4px;
+  width: auto;
+  max-width: 150px; /* Limit the width */
+}
+
+.board-management select:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.board-management button {
+  border: none;
+  background: #ffd700;
+  color: #333;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.2s ease;
+}
+
+.board-management button:hover {
+  background: #e6c200;
+}
+
+/* ----------------------------------------- */
+/* Grouped Board Controls (New Styles)       */
+/* ----------------------------------------- */
+.board-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  max-width: 600px; /* Optional: Limit width */
+}
+
+.board-controls .board-management {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.board-controls .board-management label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85em;
+  color: #333;
+}
+
+.board-controls .board-management select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 0.9em;
+  background: #f9f9f9;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 4px;
+  width: auto;
+  max-width: 150px;
+}
+
+/* Layout for the board columns */
+.kanban-board {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  position: relative; /* Needed for the pseudo-element positioning */
+}
+
+/* Colored rectangle behind the columns */
+.kanban-board::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffd90015; /* Adjust this color as desired */
+  border-radius: 8px;
+  z-index: -1;
+  margin: 10px; /* Creates some spacing between the rectangle and the board edges */
+}
+
+.board-controls .board-management select:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+/* Board Buttons Container with extra gap */
+.board-controls .board-buttons {
+  display: flex;
+  gap: 10px; /* Increased from 15px to 20px */
+  margin-top: 10px;
+}
+
+.board-controls .board-buttons button {
+  border: none;
+  background: #ffd700;
+  color: #333;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.2s ease;
+}
+
+.board-controls .board-buttons button:hover {
+  background: #e6c200;
+}
+
+.board-management input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 0.9em;
+  background: #f9f9f9;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 4px;
+  width: auto;
+  max-width: 150px;
+}

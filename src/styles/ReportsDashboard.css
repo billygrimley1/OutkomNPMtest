@@ -1,0 +1,16 @@
+.reports-dashboard {
+  background: #fff;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.report-section {
+  margin-bottom: 20px;
+}
+
+.report-section h3 {
+  margin-bottom: 10px;
+}
